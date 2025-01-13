@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Control Scale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .background-color {
+            color: black
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .radio-container {
+            text-align: center;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .statement {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .rating {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 30px;
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: #FFFF;
+            color: bisque;
+            border: none;
+            cursor: pointer;
+			width: 400px;
+			height:70px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 03);
+			font-weight:bold;
+			text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="attentionForm">
+    <div class="container">
+        <h1>Attention Control Scale</h1>
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Nickname:
+                <input type="text" name="Nama/Inisial" required>
+            </label>
+				</div>
+
+<div class="statement">
+    <label>Berapa kali anda membuka short form video(Tiktok, Reels, dan Shorts) dalam sehari?</label>
+    <div>
+        <input type="radio" id="extra1-1" name="extra1" value="1" required>
+        <label for="extra1-1">Jarang Sekali</label>
+    </div>
+    <div>
+        <input type="radio" id="extra1-2" name="extra1" value="2">
+        <label for="extra1-2">Jarang</label>
+    </div>
+    <div>
+        <input type="radio" id="extra1-3" name="extra1" value="3">
+        <label for="extra1-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="extra1-4" name="extra1" value="4">
+        <label for="extra1-4">Sangat Sering</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>Berapa lama anda menggunakannya?</label>
+    <div>
+        <input type="radio" id="extra2-1" name="extra2" value="1" required>
+        <label for="q1-1">Sangat Sebentar</label>
+    </div>
+    <div>
+        <input type="radio" id="extra2-2" name="extra2" value="2">
+        <label for="extra2-2">Sebentar</label>
+    </div>
+    <div>
+        <input type="radio" id="extra2-3" name="extra2" value="3">
+        <label for="extra2-3">Lama</label>
+    </div>
+    <div>
+        <input type="radio" id="extra2-4" name="extra2" value="4">
+        <label for="extra2-4">Sangat Lama</label>
+    </div>
+</div>
+
+
+<div class="statement">
+    <label>1. It's hard for me to concentrate on a difficult task when there are noises around.</label>
+    <div>
+        <input type="radio" id="q1-1" name="q1" value="1" required>
+        <label for="q1-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q1-2" name="q1" value="2">
+        <label for="q1-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q1-3" name="q1" value="3">
+        <label for="q1-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q1-4" name="q1" value="4">
+        <label for="q1-4">Selalu</label>
+    </div>
+</div>
+
+			
+<div class="statement">
+    <label>2. When working on something, I still get distracted by events around me.</label>
+    <div>
+        <input type="radio" id="q2-1" name="q2" value="1" required>
+        <label for="q2-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q2-2" name="q2" value="2">
+        <label for="q2-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q2-3" name="q2" value="3">
+        <label for="q2-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q2-4" name="q2" value="4">
+        <label for="q2-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>3. When reading/studying, I get easily distracted if people are talking.</label>
+    <div>
+        <input type="radio" id="q3-1" name="q3" value="1" required>
+        <label for="q3-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q3-2" name="q3" value="2">
+        <label for="q3-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q3-3" name="q3" value="3">
+        <label for="q3-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q3-4" name="q3" value="4">
+        <label for="q3-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>4. I can focus and become unaware of my surroundings when concentrating.</label>
+    <div>
+        <input type="radio" id="q4-1" name="q4" value="1" required>
+        <label for="q4-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q4-2" name="q4" value="2">
+        <label for="q4-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q4-3" name="q4" value="3">
+        <label for="q4-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q4-4" name="q4" value="4">
+        <label for="q4-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>5. I can concentrate well even if there is music in the room.</label>
+    <div>
+        <input type="radio" id="q5-1" name="q5" value="1" required>
+        <label for="q5-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q5-2" name="q5" value="2">
+        <label for="q5-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q5-3" name="q5" value="3">
+        <label for="q5-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q5-4" name="q5" value="4">
+        <label for="q5-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>6. When I need to concentrate/solve a problem, I have trouble focusing.</label>
+    <div>
+        <input type="radio" id="q6-1" name="q6" value="1" required>
+        <label for="q6-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q6-2" name="q6" value="2">
+        <label for="q6-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q6-3" name="q6" value="3">
+        <label for="q6-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q6-4" name="q6" value="4">
+        <label for="q6-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>7. When trying to focus, I have difficulty blocking out distracting thoughts.</label>
+    <div>
+        <input type="radio" id="q7-1" name="q7" value="1" required>
+        <label for="q7-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q7-2" name="q7" value="2">
+        <label for="q7-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q7-3" name="q7" value="3">
+        <label for="q7-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q7-4" name="q7" value="4">
+        <label for="q7-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>8. I have a hard time concentrating when excited about something.</label>
+    <div>
+        <input type="radio" id="q8-1" name="q8" value="1" required>
+        <label for="q8-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q8-2" name="q8" value="2">
+        <label for="q8-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q8-3" name="q8" value="3">
+        <label for="q8-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q8-4" name="q8" value="4">
+        <label for="q8-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>9. It is difficult for me to coordinate attention between listening and writing.</label>
+    <div>
+        <input type="radio" id="q9-1" name="q9" value="1" required>
+        <label for="q9-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q9-2" name="q9" value="2">
+        <label for="q9-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q9-3" name="q9" value="3">
+        <label for="q9-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q9-4" name="q9" value="4">
+        <label for="q9-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>10. I can become interested in a new topic very quickly when I need to.</label>
+    <div>
+        <input type="radio" id="q10-1" name="q10" value="1" required>
+        <label for="q10-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q10-2" name="q10" value="2">
+        <label for="q10-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q10-3" name="q10" value="3">
+        <label for="q10-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q10-4" name="q10" value="4">
+        <label for="q10-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>11. I can quickly switch from one task to another.</label>
+    <div>
+        <input type="radio" id="q11-1" name="q11" value="1" required>
+        <label for="q11-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q11-2" name="q11" value="2">
+        <label for="q11-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q11-3" name="q11" value="3">
+        <label for="q11-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q11-4" name="q11" value="4">
+        <label for="q11-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>12. I have a hard time coming up with new ideas quickly.</label>
+    <div>
+        <input type="radio" id="q12-1" name="q12" value="1" required>
+        <label for="q12-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q12-2" name="q12" value="2">
+        <label for="q12-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q12-3" name="q12" value="3">
+        <label for="q12-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q12-4" name="q12" value="4">
+        <label for="q12-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>13. I can easily alternate between two different tasks.</label>
+    <div>
+        <input type="radio" id="q13-1" name="q13" value="1" required>
+        <label for="q13-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q13-2" name="q13" value="2">
+        <label for="q13-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q13-3" name="q13" value="3">
+        <label for="q13-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q13-4" name="q13" value="4">
+        <label for="q13-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>14. It takes me a while to get really involved in a new task.</label>
+    <div>
+        <input type="radio" id="q14-1" name="q14" value="1" required>
+        <label for="q14-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q14-2" name="q14" value="2">
+        <label for="q14-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q14-3" name="q14" value="3">
+        <label for="q14-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q14-4" name="q14" value="4">
+        <label for="q14-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>15. I have trouble carrying on two conversations at once.</label>
+    <div>
+        <input type="radio" id="q15-1" name="q15" value="1" required>
+        <label for="q15-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q15-2" name="q15" value="2">
+        <label for="q15-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q15-3" name="q15" value="3">
+        <label for="q15-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q15-4" name="q15" value="4">
+        <label for="q15-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>16. I find it easy to read/write while talking on the phone.</label>
+    <div>
+        <input type="radio" id="q16-1" name="q16" value="1" required>
+        <label for="q16-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q16-2" name="q16" value="2">
+        <label for="q16-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q16-3" name="q16" value="3">
+        <label for="q16-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q16-4" name="q16" value="4">
+        <label for="q16-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>17. If a distracting thought comes to mind, I find it easy to shift my attention away from it.</label>
+    <div>
+        <input type="radio" id="q17-1" name="q17" value="1" required>
+        <label for="q17-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q17-2" name="q17" value="2">
+        <label for="q17-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q17-3" name="q17" value="3">
+        <label for="q17-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q17-4" name="q17" value="4">
+        <label for="q17-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>18. It is hard for me to break from one way of thinking to another.</label>
+    <div>
+        <input type="radio" id="q18-1" name="q18" value="1" required>
+        <label for="q18-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q18-2" name="q18" value="2">
+        <label for="q18-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q18-3" name="q18" value="3">
+        <label for="q18-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q18-4" name="q18" value="4">
+        <label for="q18-4">Selalu</label>
+    </div>
+</div>
+
+            
+<div class="statement">
+    <label>19. After being interrupted or distracted, I can easily shift my attention back to the task.</label>
+    <div>
+        <input type="radio" id="q19-1" name="q19" value="1" required>
+        <label for="q19-1">Hampir tidak pernah</label>
+    </div>
+    <div>
+        <input type="radio" id="q19-2" name="q19" value="2">
+        <label for="q19-2">Terkadang</label>
+    </div>
+    <div>
+        <input type="radio" id="q19-3" name="q19" value="3">
+        <label for="q19-3">Sering</label>
+    </div>
+    <div>
+        <input type="radio" id="q19-4" name="q19" value="4">
+        <label for="q19-4">Selalu</label>
+    </div>
+</div>
+
+            <button type="submit">Submit</button>
+    </form>
+
+        <div id="results" class="result" style="display: none;">
+            <h2>Total Score</h2>
+            <p id="totalScores"></p>
+            <table id="resultsTable" style="width: 100%; margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Initial Value</th>
+                        <th>Reversed</th>
+                        <th>Final Value</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+<script>
+            const sendDataToSupabase = async (data) => {
+                const supabaseUrl = 'https://axjezcisffpeniezoitr.supabase.co';
+                const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amV6Y2lzZmZwZW5pZXpvaXRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY2OTY0NjgsImV4cCI6MjA1MjI3MjQ2OH0.0DO5C8cyluK1YKVCvyai0eG1rxVQ_Xiz74exMQTY0g';
+            
+            try {    
+                const response = await fetch(`${'https://axjezcisffpeniezoitr.supabase.co'}/rest/v1/gelap_sekali`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amV6Y2lzZmZwZW5pZXpvaXRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY2OTY0NjgsImV4cCI6MjA1MjI3MjQ2OH0.0DO5C8cyluK1YKVCvyai0eG1rxVQ_Xiz74exMQTY0g',
+                            'Authorization': `Bearer ${'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amV6Y2lzZmZwZW5pZXpvaXRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY2OTY0NjgsImV4cCI6MjA1MjI3MjQ2OH0.0DO5C8cyluK1YKVCvyai0eG1rxVQ_Xiz74exMQTY0g'}`            
+                        },
+                        body: JSON.stringify(data)
+                });
+                if (response.ok) {
+                    alert('Data berhasil dikirim');
+                } else {
+                    const error = await response.json();
+                    console.error('Error:', error);
+                    alert('Gagal mengirim data: ' + error.message);
+                }
+            } catch (error) {
+                    console.error('Error:', error);
+                    alert('terjadi kesalahan jaringan')
+            };
+ 
+        function calculateResults() {               
+            document.getElementById('attentionForm').addEventListener('submit', (event) => {  
+			event.preventDefault();
+            const form = document.getElementById('attentionForm'); 
+            const emailField = form.querySelector('input[name="email"]').value.trim();
+            const nickname = form.querySelector('input[name="Nama/Inisial"]').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailField || !emailField.value.trim()) {
+				alert('Masukkan Alamat email!');
+				emailField.focus();
+				return;
+			};
+			if (!emailPattern.test(emailField.value.trim())) {
+				alert('Masukkan format email yang valid!');
+				emailField.focus();
+				return;
+            };    
+            const reversedItems = ['q1', 'q2', 'q3', 'q6', 'q7', 'q8', 'q9', 'q12', 'q14', 'q15', 'q18'];
+            const answers  = {};
+            let totalScore = 0;
+            const questions = form.querySelectorAll('input[name^="q"]:checked');
+            });        
+            questions.forEach((input) => {
+                const questionId = input.name;
+                const originalValue  = parseInt(input.value, 10)
+                const finalValue = reversedItems.includes(questionId) ? 5 - originalValue : originalValue;
+                answers[questionId] = finalValue;
+                totalScore += finalValue;
+            });
+                const data = {
+                    email: emailField,
+                    nickname: nickname,
+                    answers: answers,
+                    totalScore: totalScore,
+                    timestamp: new Date().toISOString()
+
+            };            
+                const displayResults = (totalScore, answers) => {
+                const resultsTable = document.querySelector('#resultsTabletbody');
+                const totalScoreElement = document.GetElementById('totalScores');
+                resultsTable.innerHTML = '';
+                totalScoresElement.textContent = `Total Skor Anda: ${totalScore}`;
+                Object.entries(answers).forEach(([question, value]) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${questiond}</td>
+                                     <td>${5 - value}</td>
+                                     <td>${value}</td>
+            `;
+            resultTable.appendChild(row);
+            });
+            document.getElementById('results').style.display = 'block';
+        };
+        
+    };
+        sendDataToSupabase(data);
+};
+        calculateResult();    
+</script>
+</body>
+</html>
